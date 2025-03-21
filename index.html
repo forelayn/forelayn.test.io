@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Тест скорости Интернета</title>
+</head>
+<body>
+
+<a href="#" onclick="openSpeedTest()" title="Тест скорости Интернет соединения">
+    <img src="https://2ip.ua/images/speedometr/3.png" style="width:200px;" alt="Тест скорости">
+</a>
+
+<script>
+function openSpeedTest() {
+    var width = 875;
+    var height = 615;
+    var left = (screen.width - width) / 2;
+    var top = (screen.height - height) / 2;
+
+    window.open("https://2ip.ua/ru/myspeed", "speedo", 
+        "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top + 
+        ",scrollbars=yes,resizable=yes");
+
+    return false; // Предотвращаем переход по ссылке
+}
+</script>
+
+</body>
+</html>
