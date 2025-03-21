@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <title>Тест скорости Интернета</title>
+ <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <title>Виджет с двумя кнопками</title>
 </head>
 <body>
 
-<a href="#" onclick="openSpeedTest()" title="Тест скорости Интернет соединения">
-    <img src="https://2ip.ua/images/speedometr/3.png" style="width:200px;" alt="Тест скорости">
-</a>
+    <h1>Виджет с двумя кнопками</h1>
 
-<script>
-function openSpeedTest() {
-    var width = 875;
-    var height = 615;
-    var left = (screen.width - width) / 2;
-    var top = (screen.height - height) / 2;
+    <button id="button1">Кнопка 1</button>
+    <button id="button2">Кнопка 2</button>
 
-    window.open("https://2ip.ua/ru/myspeed", "speedo", 
-        "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top + 
-        ",scrollbars=yes,resizable=yes");
+    <p id="message"></p>
 
-    return false; // Предотвращаем переход по ссылке
-}
-</script>
+    <script>
+        document.getElementById('button1').addEventListener('click', function() {
+            document.getElementById('message').textContent = 'Нажата кнопка 1';
+        });
+
+        document.getElementById('button2').addEventListener('click', function() {
+            document.getElementById('message').textContent = 'Нажата кнопка 2';
+        });
+    </script>
 
 </body>
 </html>
